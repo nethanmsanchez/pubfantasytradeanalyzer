@@ -1,0 +1,644 @@
+/* styles.css
+   FantasyTradeAnalyzer
+   Nethan S
+   This file contains all of the css code for the project. It includes two different sets of styles, one
+   for larger and one for smaller sized screens.
+*/
+
+
+
+@media only screen and (max-width: 1130.5px) {
+    /* --------------------------------------------------------------------------------------------------------------------
+                                                            App.js (and higher)
+    -------------------------------------------------------------------------------------------------------------------- */
+    .app{
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* --------------------------------------------------------------------------------------------------------------------
+                                                            mainPage.js 
+    -------------------------------------------------------------------------------------------------------------------- */
+    .mainpage{
+      width: 100%;
+      min-height: 100vh;
+      margin: 0px;
+      padding: 0px;
+      background-color:rgb(202, 224, 252);
+      text-align: center;
+    }
+    
+    .title {
+      height: min-content;
+      margin: 0px;
+      padding: 10px;
+      text-align: center;
+      color:rgb(10, 66, 118);
+    }
+    
+    .acf_inmp1{
+      min-width: 250px;
+      width: 70%;
+      margin: 0px auto 0px;
+      padding: 15px;
+      display: block;
+      background-color: rgb(10, 66, 118);
+    }
+    
+    .ltotals {
+      width: 70px;
+      margin: 0px auto 0px;
+      padding: 10px 0px 10px 0px;
+      display: block;
+      background-color: aliceblue;
+      font-size: 35px;
+    }
+    
+    .rtotals {
+      width: 70px;
+      margin: 0px auto 0px;
+      padding: 10px 0px 10px 0px;
+      display: block;
+      background-color: aliceblue;
+      font-size: 35px;
+    }
+
+    .winner {
+      background-color: rgb(71, 242, 196, .5);
+      padding: 20px 10px 20px 10px;
+    }
+    
+    .loser {
+      background-color: rgb(250, 157, 157, .5);
+      padding: 10px 0px 10px 0px;
+    }
+    
+    .acf_inmp2{
+      min-width: 250px;
+      width: 70%;
+      margin: 0px auto 0px auto;
+      padding: 15px;
+      display: block;
+      background-color: rgb(10, 66, 118);
+    }
+    
+    .compare1 {
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    .compare2 {
+      margin: 0px;
+      padding: 0px;
+      display: none;
+    }
+    
+    .space2 {
+      height: 3vh;
+    }
+
+    .results_text {
+      position: relative;
+      left: 0px;
+      top: 0px;
+    }
+    
+    
+    /* --------------------------------------------------------------------------------------------------------------------
+                                                        autoCompleteForm.js 
+    -------------------------------------------------------------------------------------------------------------------- */
+    .autocomplete {
+      width: 100%;
+      min-height: min-content;
+      margin: 0px 0px 0px 0px;
+      padding: 0px;
+    }
+    
+    .teamname {
+      width: 100%;
+      height: min-content;
+      margin: 0px 0px 10px 0px;
+      padding: 0px;
+      text-align: center;
+      background-color: aliceblue;
+      color: rgb(10, 66, 118);
+    }
+    
+    .form {
+      width: 100%;
+      height: min-content;
+      margin: 0px 0px 10px 0px;
+      padding: 0px;
+    }
+    
+    .label {
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+      white-space: nowrap;
+    }
+    
+    .textbox{
+      width: 80%;
+      height: 100%;
+      margin: 0px;
+      padding: 0px 0px 0px 0px;
+      display: inline-block;
+    
+    }
+    
+    .add {
+      width: 19%;
+      height: 100%;
+      margin: 0px 0px 0px 0px;
+      padding: 0px;
+      display: inline-block;
+    }
+    
+    .suggestions {
+      width: 100%;
+      max-height: 143px;
+      list-style: none;
+      margin: 0px;
+      padding-left: 0;
+      overflow-y: auto;
+      list-style: none;
+      background-color: aliceblue;
+    }
+    
+    .suggestion_entry:hover {
+      background-color: grey;
+    }
+    
+    .suggestion_entry {
+      margin: 0;
+    }
+    
+    .del {
+      width: 10%;
+      margin: 0px;
+      padding: 0px;
+      display: inline-block;
+      height: 100%;
+    }
+    
+    .spacer {
+      width: 10%;
+      margin: 0px;
+      padding: 0px;
+      display: inline-block;
+      height: 100%;
+    }
+    
+    .row {
+      width: 100%;
+      height: min-content;
+      margin: 0px;
+      padding: 0px;
+      background-color: rgb(10, 66, 118);
+      display: inline-block;
+      white-space: nowrap;
+      text-align: left;
+    }
+    
+    .key {
+      width: 100%;
+      height: min-content;
+      margin: 0px 0px 5px 0px;
+      padding: 0px;
+      background-color: rgb(10, 66, 118);
+      display: inline-block;
+      white-space: nowrap;
+      text-align: left;
+    }
+    
+    /* --------------------------------------------------------------------------------------------------------------------
+                                                            playerView.js 
+    -------------------------------------------------------------------------------------------------------------------- */
+    .player {
+      width: 84%;
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+      display: inline-block;
+      text-align: left;
+    }
+    
+    .pos {
+      width: 10%;
+      margin: 0px auto;
+      border: 1px solid black;
+      display: inline-block;
+      text-align: center;
+      background-color:rgb(202, 224, 252);
+    }
+    
+    .name {
+      display: inline-block;
+      margin: 0px auto;
+      border: 1px solid black;
+      width: 47%;
+      text-align: center;
+      background-color:rgb(202, 224, 252);
+    }
+    
+    .team {
+      width: 17%;
+      display: inline-block;
+      margin: 0px 0px;
+      border: 1px solid black;
+      text-align: center;  
+      background-color:rgb(202, 224, 252);
+    }
+    
+    .bye {
+      width: 9%;
+      display: inline-block;
+      margin: 0px 0px;
+      border: 1px solid black;
+      text-align: center;
+      background-color:rgb(202, 224, 252);
+    
+    }
+    
+    .points {
+      width: 15%;
+      margin: 0px 0px;
+      display: inline-block;
+      border: 1px solid black;
+      text-align: center;
+      background-color:rgb(202, 224, 252);
+    
+    }
+    
+    .test {
+      background-color: aliceblue;
+    }
+    
+    .space1 {
+      max-width: 1%;
+      width: 1%;
+      display: inline-block;
+    }
+    
+    
+    /* --------------------------------------------------------------------------------------------------------------------
+                                                        popUp.js 
+    -------------------------------------------------------------------------------------------------------------------- */
+    
+    .outer {
+      border: 20px solid rgb(10, 66, 118);
+      text-align: center;
+      width: 50%;
+      height: 15%;
+      margin: auto;
+      position: fixed;
+      left: 25%;
+      bottom: 42%;
+      color: rgb(10, 66, 118);
+    }
+    
+    .close {
+      width: 8%;
+      height: 30%;
+      margin: auto;
+      padding: 0px;
+      position: absolute;
+      right: 0%;
+      top: 0%;
+      text-align: center;
+    }
+    
+    
+    /* --------------------------------------------------------------------------------------------------------------------
+                                                             misc 
+    -------------------------------------------------------------------------------------------------------------------- */
+    
+    
+    }
+    
+    
+    
+    
+    
+    
+    /* --------------------------------------------------------------------------------------------------------------------
+       ********************************************************************************************************************
+    
+    
+    
+    
+                                                   For Larger Screens
+    
+    
+    
+    
+    ********************************************************************************************************************   
+    -------------------------------------------------------------------------------------------------------------------- */
+    
+    
+    
+    
+    @media only screen and (min-width: 1130.6px) {
+    
+    
+    /* --------------------------------------------------------------------------------------------------------------------
+                                                            App.js (and higher)
+    -------------------------------------------------------------------------------------------------------------------- */
+    .app{
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* --------------------------------------------------------------------------------------------------------------------
+                                                            mainPage.js 
+    -------------------------------------------------------------------------------------------------------------------- */
+    .mainpage{
+      width: 100%;
+      min-height: 100vh;
+      margin: 0px;
+      padding: 0px;
+      background-color:rgb(202, 224, 252);
+      text-align: center;
+    }
+    
+    .title {
+      height: min-content;
+      margin: 0px;
+      padding: 10px;
+      text-align: center;
+      color:rgb(10, 66, 118);
+    }
+    
+    .acf_inmp1{
+      min-width: 400px;
+      width: 35%;
+      margin: 20px auto 10px 10px;
+      padding: 15px;
+      display: inline-block;
+      background-color: rgb(10, 66, 118);
+    }
+    .acf_inmp2{
+      min-width: 400px;
+      width: 35%;
+      margin: 20px 10px 10px auto;
+      padding: 15px;
+      display: inline-block;
+      background-color: rgb(10, 66, 118);
+    }
+    
+    .space2 {
+      width: 2%;
+      display: inline-block;
+    }
+    
+    .ltotals {
+      width: 70px;
+      margin: 0px 0px 0px 0px;
+      padding: 10px 0px 10px 0px;
+      text-align: center;
+      display: inline-block;
+      background-color: aliceblue;
+      position: relative;
+      bottom: 30px;
+      font-size: 35px;
+    }
+    
+    .rtotals {
+      width: 70px;
+      margin: 0px 0px 0px 0px;
+      padding: 10px 0px 10px 0px;
+      text-align: center;
+      display: inline-block;
+      background-color: aliceblue;
+      position: relative;
+      bottom: 30px;
+      font-size: 35px;
+    }
+
+    .winner {
+      background-color: rgb(71, 242, 196, .5);
+      padding: 20px 10px 20px 10px;
+    }
+    
+    .loser {
+      background-color: rgb(250, 157, 157, .5);
+      padding: 10px 0px 10px 0px;
+    }
+    
+    .compare1 {
+      margin: 0px;
+      padding: 0px;
+      display: none;
+    }
+    
+    .compare2 {
+      margin: 0px;
+      padding: 0px;
+      display: relative;
+    }
+
+    .results_text {
+      position: relative;
+      left: 0px;
+      top: 0px;
+    }
+    
+    
+    /* --------------------------------------------------------------------------------------------------------------------
+                                                        autoCompleteForm.js 
+    -------------------------------------------------------------------------------------------------------------------- */
+    .autocomplete {
+      width: 100%;
+      min-height: min-content;
+      margin: 0px 0px 0px 0px;
+      padding: 0px;
+      /*background-color: rgb(10, 66, 118);*/
+    }
+    
+    .teamname {
+      width: 100%;
+      height: min-content;
+      margin: 0px 0px 10px 0px;
+      padding: 0px;
+      text-align: center;
+      background-color:aliceblue;
+      color: rgb(10, 66, 118);
+    }
+    
+    .form {
+      width: 100%;
+      height: min-content;
+      margin: 0px 0px 10px 0px;
+      padding: 0px;
+      
+    }
+    
+    .label {
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+      white-space: nowrap;
+    }
+    
+    .textbox{
+      width: 80%;
+      height: 100%;
+      margin: 0px;
+      padding: 0px 0px 0px 0px;
+      display: inline-block;
+    }
+    
+    .add {
+      width: 19%;
+      height: 100%;
+      margin: 0px 0px 0px 0px;
+      padding: 0px;
+      display: inline-block;
+    }
+    
+    .suggestions {
+      width: 100%;
+      max-height: 143px;
+      list-style: none;
+      margin: 0;
+      padding-left: 0;
+      overflow-y: auto;
+      list-style: none;
+      background-color: aliceblue;
+    }
+    
+    .suggestion_entry:hover {
+      background-color: grey;
+    }
+    
+    .suggestion_entry {
+      margin: 0;
+    }
+    
+    .del {
+      width: 10%;
+      margin: 0px;
+      padding: 0px;
+      display: inline-block;
+      height: 100%;
+    }
+    
+    .spacer {
+      width: 10%;
+      margin: 0px;
+      padding: 0px;
+      display: inline-block;
+      height: 100%;
+    }
+    
+    .row {
+      width: 100%;
+      height: min-content;
+      margin: 0px;
+      padding: 0px;
+      
+      display: inline-block;
+      white-space: nowrap;
+      text-align: left;
+    }
+    
+    .key {
+      width: 100%;
+      height: min-content;
+      margin: 0px 0px 5px 0px;
+      padding: 0px;
+      background-color: rgb(10, 66, 118);
+      display: inline-block;
+      white-space: nowrap;
+      text-align: left;
+    }
+    
+    /* --------------------------------------------------------------------------------------------------------------------
+                                                            playerView.js 
+    -------------------------------------------------------------------------------------------------------------------- */
+    .player {
+      width: 84%;
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+      display: inline-block;
+      text-align: left;
+    }
+    
+    .pos {
+      width: 10%;
+      margin: 0px auto;
+      border: 1px solid black;
+      display: inline-block;
+      text-align: center;
+      background-color:rgb(202, 224, 252);
+    }
+    
+    .name {
+      display: inline-block;
+      margin: 0px auto;
+      border: 1px solid black;
+      width: 47%;
+      text-align: center;
+      background-color:rgb(202, 224, 252);
+    }
+    
+    .team {
+      width: 17%;
+      display: inline-block;
+      margin: 0px 0px;
+      border: 1px solid black;
+      text-align: center;
+      background-color:rgb(202, 224, 252);
+    }
+    
+    .bye {
+      width: 9%;
+      display: inline-block;
+      margin: 0px 0px;
+      border: 1px solid black;
+      text-align: center;
+      background-color:rgb(202, 224, 252);
+    }
+    
+    .points {
+      width: 15%;
+      margin: 0px 0px;
+      display: inline-block;
+      border: 1px solid black;
+      text-align: center;
+      color: rgb(10, 66, 118);
+      background-color:rgb(202, 224, 252);
+    }
+    
+    .test {
+      background-color:rgb(255, 255, 255);
+    }
+    
+    .space1 {
+      max-width: 1%;
+      width: 1%;
+      display: inline-block;
+    }
+    
+    
+    
+    /* --------------------------------------------------------------------------------------------------------------------
+                                                             misc 
+    -------------------------------------------------------------------------------------------------------------------- */
+    
+    
+    }
