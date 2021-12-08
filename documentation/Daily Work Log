@@ -1,0 +1,196 @@
+
+
+
+
+
+Thursday 9/30/21
+-committed previous work
+-created new database and collection in the MondoDB cluster
+-started merging db_connection and statsScraper code into db_connection.js
+-changed mongo settings to allow access from any ip address
+-discovered code doesn't stop running
+-going to researching all the code I use so far that I don't know what it does (ex. await, async, etc...)
+
+Tuesday 10/5/21
+-finished merging db_connection and statsScraper code
+-successfully accessing db and getting webscraped data into main
+-created Player object with getters, setters and printPlayer function
+-need to figure out how to access Player.printPlayer() in main. Have to pass Player to main wrapped in a promise, which may be why i can't access the function in main.
+-seems to be some sort of typing error.
+-resolved this issue by assigning the Promise object to a variable and then using variable_name.printPlayer() which worked
+
+Wednesday 10/6/21
+-tested function insertPlayer() which successsfully added test player Pat Mahomes to my db. confirmed on mongodb
+-deleted listDatabases() first created to test database connection
+-added code to create an array of Players for all the QBs
+
+Thursday 10/7/21
+-finished created CRUD operations, and tested the important ones (InsertMultPlayers(), DeleteAllPlayers(), findPlayerByName())
+-finished scraping all other positions
+-starting to follow mongodb mern stack tutorial: https://www.mongodb.com/languages/mern-stack-tutorial
+-when running command npx create-react-app client got messages about vulnerabilities, npm audit fix fixed most. there is one more that it could not resolve, the output is pasted into the project notes file
+
+Tuesday 10/12/21
+-read and took notes on Next.js.
+-seems like a good framework, may try to remake with Next.js after getting it to work with original tutorial
+
+Wednesday 10/13/21
+-following first tutorial from 10/7/21
+-getting very hair and not understanding things
+-starting a react tutorial (https://reactjs.org/docs/introducing-jsx.html) to get some more understanding on the front end side
+
+Thursday 10/14/21
+-stopped following React tutorial from 10/13/21, didn't finish but about 75% of the way so far.
+-trying to create my own react code:
+    -Got text input to successfully take in text and print it.
+        -was having trouble at first trying to change the value attribute of the <input> tag, not realizing it was a needed attribute
+    -Now going to try to get that input to search from the db
+        -need to research axios calls to see how they work
+
+Sunday 10/17/21 - Monday 10/18/21
+-just worked for an hour or so total
+-was able to finally get the axios call to work and figure out how to get receive the data from that call
+
+Tuesday 10/19/21
+-got data from react PlayerForm/testcomponent to back end server code, got player from db, got player info from db back to front end react component.
+-next I need to create a test PlayerView component and display the player retrieved from db
+-first stopping to take nots on express to understand that code better
+
+Wednesday 10/20/21
+-trying to get playerView to work
+-having issues in playerForm, getting errors when trying to update state in axios.get().then()
+    -would like to figure this out but can also probably just pass data without using state if I can't
+
+Thursday 10/21/21
+-was having a bunch of trouble getting axios.get() data from res in .then block.
+    -seemed to get it working had to resolve some mixture of issues with: scope, promise
+-finally got it to work all the way and to display player info
+    -had to use this.props.history.push() inside axios_returned_promise.then() to finally get it to work
+
+Tuesday 10/26/21
+-done adding code to save all the player names in a db entry to add suggestions/fill to search bar
+-started creating an autocomplete form component:
+    -using https://www.digitalocean.com/community/tutorials/react-react-autocomplete for some ideas, most code is my own take
+
+Wednesday 10/27/21
+-stopped working on autocomplete functionality, it has enough to be usable for now, but should polish later
+-changing playerView to take an array and display multiple players
+
+Sunday 10/31/21
+-completed the delete button functionality.
+
+Monday 11/1/21
+-completed very basic complete version of app
+
+Tuesday 11/2/21
+-resolved fixed the repo and it's hopefully fine now.
+-need to finish creating public git repo of just useful files
+
+Wednesday 11/3/21
+-starting CSS tutorial from https://www.w3schools.com/css/css_intro.asp
+
+Thursday 11/4/21
+-worked on CSS tutorial
+
+Sunday 11/7/21
+-worked on CSS tutorial
+
+Monday 11/8/21
+-worked on CSS tutorial
+
+Tuesday 11/9/21
+-worked on CSS tutorial
+
+Wednesday 11/10/21
+-worked on CSS tutorial
+
+Thursday 11/11/21
+-worked on CSS tutorial
+
+Sunday 11/14/21
+-worked on CSS tutorial
+
+Monday 11/15/21
+-started working on actual project css
+
+Tuesday 11/16/21
+- working on project css
+
+Wednesday 11/17/21
+-working on project css
+-adding $ npm install react-responsive --save 
+    -from: https://www.npmjs.com/package/react-responsive
+    -this allows me to use media query hook in order to change html based on screen size
+
+Thursday 11/18/21
+- working on project css
+
+Sunday 11/21/21
+- tomorrow try to create a way to initialize components with the data going in
+
+Monday 11/22/21
+- figured out a way to fix ui issue, just added two buttons and hide one not currently being used.
+- adding alert component from: https://www.npmjs.com/package/react-alert
+
+Tuesday 11/23/21
+- fixing ui:
+    - colors
+    - winner = green, loser = red
+    - clearing message and color when updating total (add/del player)
+    - starting pop-up component creation
+
+Wednesday 11/24/21
+- finished pop-up component
+- got it to popup at correct times and stops adding the player
+
+Sunday 11/28/21
+- looking into how to deploy
+
+Monday 11/29/21
+- starting deployment attempt 1
+
+Tuesday 11/30/21
+- starting deployment attempt 1
+
+Wednesday 12/1/21
+- working on deployment attempt 1 still
+- was getting an error due to depreciated withRouter import. looked into it and I don't need to use
+  withRouter as it was mainly used to allow me to change the react route from that component, which I
+  never do. At some point I should go back and learn about the react router stuff in more detail.
+- finally got ui to show up, needed to take out route part of App -> MainPage
+    - look into why this didn't work, although it doesn't seem to be necessary
+- now I need to figure out why axios call isn't working. figure it's something to do with proxy
+- I finally got the it work fully !!!
+- To work on: fix routing issues (server api calls & react component routing App -> MainPage),    make it look a little better on mobile, figure out how to update db daily automatically, clean up code, make sure it's secure-ish with package.json(license) & config.env stuff, fix ui for the winner as well
+
+Sunday 12/5/21
+- fixed route issue, changed mongo password and removed config.env from git
+
+Tuesday 12/7/21
+- updated ui, found out easy way to update db using windows task scheduler on windows, finished client files code clean-up
+- tomorrow do: server/db file code clean-up, update and push public git hub repo
+
+Wednesday 12/8/21
+- finished cleaning up code, updated public repo, created README.txt
+
+To-Do:
+- make it look a little better on mobile (skipping for now, may fix later)
+- clean up code
+- update db daily automatically
+
+
+
+In Progress:
+-code searches players in db by name, need to figure out a way to make sure they search the correct name. ex in db Patrick Mahomes is listed as "Pat Mahomes" from the website data is pulled from. Need to make sure Patrick Mahomes will return same result.
+    -resolution: So far I've implemented a autocomplete form that will show suggestions based on entered text. Still need to add styling to it (like highlighting when hovering over), make it display a message if trying to add without matching a valid string
+
+Done:
+
+
+
+
+To start app in local environment for testing:
+After closing everything, to start the app, follow these steps.
+
+Go into the server folder and run the command nodemon server.js.
+Go back to the client folder and run the command npm start.

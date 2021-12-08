@@ -1,0 +1,52 @@
+
+
+
+
+
+Following guide from https://daveceddia.com/deploy-react-express-app-heroku/
+
+The method keeps the backend and frontend together on one "machine", express serves the react files and also serves the api requests
+
+
+Step 1: Create Heroku account
+
+Step 2: Download Heroku CLI (command line interface) which comes with "toolbelt" from https://devcenter.heroku.com/articles/heroku-cli
+
+Step 3: Create the Express App 
+    - create parent directory that will contain everything. It can be named anything.
+    - initialize the project with npm or yarn ($ npm init -y)
+    - install express, cors, dotenv, mongodb, react-router-dom, react-responsive, axios,
+      (took out dotenv because I don't think it's needed for deployment, may add later)
+
+Step 4: Create index.js (just copied server.js)
+
+Step 5: Move over Routes from other project and make sure all the folders (db, env.config, etc...) and paths are correct in new project
+
+Step 6: Initialize git, add node_modules to .gitignore
+
+Step 7: run heroku login and create commands
+    - ($ heroku login)
+    - ($ heroku create)
+
+Step 8: git add, commit and push
+    - git add and commit are the same as usual
+    - to push use ($ git push heroku master)
+
+Step 9: generate the react app
+    - ($ create-react-app client)
+    - ($ npm install -g create-react-app) if don't already have create-react-app
+
+Step 10: add proxy to package.json
+    - ("proxy": "http://localhost:5000")
+    - this goes into the client/package.json, not the express package.json
+
+Step 11: move over all react files needed and update paths in files if needed
+
+
+
+
+
+
+
+
+
